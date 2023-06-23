@@ -2,7 +2,7 @@ import React from "react";
 import Producto from "./Producto";
 import "../styles/changuito.css";
 
-const Changuito = ({ changuito }) => {
+const Changuito = ({ changuito, agregarProducto }) => {
   return (
     <>
       <div className="changuito">
@@ -10,7 +10,9 @@ const Changuito = ({ changuito }) => {
         {changuito.map((producto) => (
           <Producto 
             key = {producto.id} 
-            producto = {producto} 
+            producto = {producto}
+            changuito={changuito}
+            agregarProducto={agregarProducto}
           />
         ))}
       </div>
