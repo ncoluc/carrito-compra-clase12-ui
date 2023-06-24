@@ -1,11 +1,20 @@
 import { useState } from "react";
-import Producto from "./Producto";
 import carrito from "../imagenes/carrito.png";
 import { Table, Button, Container, Row, Col, Offcanvas } from "react-bootstrap";
 
 const Changuito = ({ changuito, agregarProducto }) => {
   const totalChanguito = () => {
-    return changuito.reduce((suma, producto) => suma + producto.precio, 0);
+    const total = changuito.reduce((suma, producto) => suma + producto.precio, 0);
+    return formatoPrecio(total);
+  };
+
+  const formatoPrecio = (monto) => {
+    return monto.toLocaleString("es-AR", {
+      style: "currency",
+      currency: "ARS",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
   };
 
   //Funcion para borrar producto
@@ -25,7 +34,7 @@ const Changuito = ({ changuito, agregarProducto }) => {
         <td>{index + 1}</td>
         <td>{producto.marca}</td>
         <td>{producto.modelo}</td>
-        <td>{producto.precio}</td>
+        <td>{formatoPrecio(producto.precio)}</td>
         <td>
           <Button variant="danger" onClick={() => eliminarProducto(producto.id)}>
             Eliminar
@@ -37,10 +46,14 @@ const Changuito = ({ changuito, agregarProducto }) => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        <img src={carrito}></img>
-        {changuito.length}
-      </Button>
+      <div className="nav-changuito">
+        <div className="a-changuito">
+          <Button variant="primary" onClick={handleShow}>
+            <img src={carrito} alt="Carrito"></img>
+            <p>{changuito.length}</p>
+          </Button>
+        </div>
+      </div>
 
       <Offcanvas show={show} onHide={handleClose} placement={"end"}>
         <Offcanvas.Header closeButton>

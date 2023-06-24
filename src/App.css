@@ -1,39 +1,98 @@
+#productos,
+#productosDestacados {
+  display: flex !important;
+
+  align-items: center !important;
+
+  flex-direction: column !important;
+}
+
+#productos h3,
+#productosDestacados h3 {
+  background-color: aquamarine;
+  text-align: center;
+  width: 40%;
+}
+
+.imagen-card {
+  height: 200px;
+  width: 100%;
+}
+
+nav {
+  height: 75px;
+}
+
+.navbar-nav {
+  background-color: rgb(33, 37, 41);
+  width: 100%;
+}
+
+.navbar-nav a {
+  margin-left: 10px !important;
+}
+
+.a-changuito {
+  display: flex !important;
+  align-items: center;
+  padding: 0 !important;
+}
+
+.div-changuito {
+  width: 60px;
+}
+
+.a-changuito button {
+  display: flex;
+  align-items: center;
+}
+
+.a-changuito img {
+  width: 40px;
+  height: 30px;
+}
+
+.a-changuito p {
+  margin: 0px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
 footer {
-    background-color: rgb(33, 37, 41);
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 300;
-    color: #ccc;
-  }
-  
-  .contacto-section {
-    padding-top: 0px;
-    background-color: rgb(33, 37, 41);
-    text-align: center;
-    border-bottom: 0px;
-  }
-  
-  .contacto-section h2 {
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  
-  .contacto-section p {
-    font-size: 16px;
-    color: #ccc;
-  }
-  
-  .contacto-section ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .contacto-section li {
-    margin-bottom: 10px;
-    color: #ccc;
-  }
-  
+  background-color: rgb(33, 37, 41);
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ccc;
+}
+
+.contacto-section {
+  padding-top: 0px;
+  background-color: rgb(33, 37, 41);
+  text-align: center;
+  border-bottom: 0px;
+}
+
+.contacto-section h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contacto-section p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.contacto-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contacto-section li {
+  margin-bottom: 10px;
+  color: #ccc;
+}
